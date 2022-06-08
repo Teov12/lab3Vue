@@ -1,10 +1,8 @@
 const app = Vue.createApp({
   data(){
     return{
-      inversionMinima: 'La inversion minima debe ser de $1000',
-      diasMinimos: '(Mínimo 30 días)',
-      inversion: 'Monto que desea invertir',
-      ingresarDatos: 'Por favor, ingrese sus datos',
+      minimoMonto: 1000,
+      diasMinimos: 30,
       name: '',
       monto: null,
       dias: null,
@@ -16,6 +14,15 @@ const app = Vue.createApp({
       porcentaje: 0,
 
     }
+  },
+  computed: {
+    inversionMinima() {
+      return '(La inversion minima debe ser de ' + this.minimoMonto + ')'
+    },
+    periodoMinimo(){
+      return '(Minimo '+ this.diasMinimos + ' dias)'
+    }
+
   },
   methods: {
     btnCalcular(){

@@ -13,7 +13,13 @@ header{
   margin-left: 30%;
   margin-right: 30%;
   border-radius: 5%;
-  background-color: darkgrey;
+  color: lightgrey;
+  background: linear-gradient(rgb(114, 114, 114), rgb(65, 65, 65));
+  }
+  hr{
+    height: 5px;
+    border-radius: 5%;
+    background-color: lightgrey;
   }
 label{
   font-size: 2rem;
