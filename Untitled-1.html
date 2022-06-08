@@ -15,22 +15,23 @@
             <section>
             <label for="name"> Apellido y nombre: </label><br>
             <input v-model="name"><br>
-            <p id="error" v-show="mostrarErrorDatos">El nombre y el apellido son datos requeridos</p>
             <label for="monto"> {{inversion}} </label><br>
             <input v-model="monto"><br>
-            <p id="error" v-show="mostrarErrorMonto">El monto ingresado no es valido</p>
             <small>{{inversionMinima}}</small>
             <br>
             <label for="dias"> Cantidad de días: </label><br>
             <input v-model="dias"><br>
-            <p id="error" v-show="mostrarErrorDias">Los dias ingresados no son validos</p>
             <small>{{diasMinimos}}</small>
             <br><br>
             <button v-on:click="btnCalcular">Calcular</button>
             <br>
             
             </section>
-            <div id="error"></div>
+            <div id="error">
+                <p v-show="mensajeError === 1">El nombre y el apellido son datos requeridos</p>
+                <p v-show="mensajeError === 2">El monto ingresado no es valido</p>
+                <p v-show="mensajeError === 3">Los dias ingresados no son validos</p>
+            </div>
         </div>
         <div id="mostrarMontoFinal"></div>
         <br>

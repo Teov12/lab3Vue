@@ -26,10 +26,13 @@ label{
   }
   #error{
     font-size: 2em;
+    font-family: Helvetica;
     background-color: red;
     color: white;
     margin-left: 10%;
     margin-right: 10%;
+    border-radius: 20px;
+    
     
   }
   #mostrarReinvertir{
